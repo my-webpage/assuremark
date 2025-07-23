@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Accredited - iso</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="accredited-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="https://i.ibb.co/sdRGX3MB/IICP-500-x-500-px-1.png" alt="">
+
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="accredited.html" class="active">Accredited</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+
+          <!-- End Mega Menu 2 -->
+
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#contact">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+<!-- Organization Search Section Start -->
+<section id="org-directory-section" style="margin: 40px 0;">
+  <style>
+    #org-directory {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    #org-directory h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      color: #333;
+    }
+    #orgSearchInput {
+      width: 100%;
+      padding: 12px;
+      font-size: 1em;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    #orgList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none; /* Hidden by default */
+    }
+    .org-item {
+      border-bottom: 1px solid #eee;
+      padding: 14px 10px;
+    }
+    .org-name {
+      font-weight: bold;
+      color: #1976d2;
+    }
+    .org-detail {
+      font-size: 0.95em;
+      color: #555;
+    }
+    .org-link a {
+      color: #388e3c;
+      text-decoration: none;
+    }
+  </style>
+
+  <div id="org-directory">
+    <h2>Organization Directory</h2>
+    <input type="text" placeholder="Search here..." id="orgSearchInput" />
+    <ul id="orgList"></ul>
+  </div>
+
+  <script>
+    const orgData = [
+      {
+        name: "International Institute of Career Progression (IICP)",
+        address: "Nigdi, PCMC, Pune, Maharashtra, India",
+        iso: "AMI-9001-25-0758641"
+      },
+      {
+        name: "Global Nexus Foundation",
+        address: "123 Innovation Blvd, Dubai, UAE",
+        iso: "GNF-ISO-9001-898742"
+      },
+      {
+        name: "VirtuoTech Syndicate",
+        address: "9 Silicon Avenue, New York, USA",
+        iso: "VTS-ISO-9001-009812"
+      },
+      {
+        name: "Unified Future Consortium",
+        address: "21 Harmony Street, Oslo, Norway",
+        iso: "UFC-ISO-9001-738201"
+      },
+      {
+        name: "Alliance for Digital Prosperity",
+        address: "8 Quantum Road, Berlin, Germany",
+        iso: "ADP-ISO-9001-123765"
+      },
+      {
+        name: "Quantum Leap Forum",
+        address: "450 NeoTech Park, Tokyo, Japan",
+        iso: "QLF-ISO-9001-555012"
+      },
+      {
+        name: "Transnational Harmony Council",
+        address: "16 Peace Valley, Geneva, Switzerland",
+        iso: "THC-ISO-9001-004812"
+      },
+      {
+        name: "Infinite Learning Network",
+        address: "3 LearnTech Heights, Toronto, Canada",
+        iso: "ILN-ISO-9001-764801"
+      },
+      {
+        name: "Global Insight Solutions",
+        address: "2 Visionary Tower, Singapore",
+        iso: "GIS-ISO-9001-881245"
+      },
+      {
+        name: "Futurebridge Institute",
+        address: "5 Bridge Circle, Amsterdam, Netherlands",
+        iso: "FBI-ISO-9001-295487"
+      },
+      {
+        name: "Virtual Unity Organization",
+        address: "62 Unity Lane, Cape Town, South Africa",
+        iso: "VUO-ISO-9001-339281"
+      },
+      {
+        name: "NexGen Innovation Lab",
+        address: "11 Techspire Drive, Sydney, Australia",
+        iso: "NIL-ISO-9001-994561"
+      },
+      {
+        name: "Strategic Synergy Initiative",
+        address: "44 Synergy Square, Brussels, Belgium",
+        iso: "SSI-ISO-9001-555728"
+      },
+      {
+        name: "World Empowerment Guild",
+        address: "7 Wisdom Row, London, UK",
+        iso: "WEG-ISO-9001-817263"
+      },
+      {
+        name: "Pioneering Minds Collaborative",
+        address: "18 Vision Blvd, Seoul, South Korea",
+        iso: "PMC-ISO-9001-613420"
+      },
+      {
+        name: "VisionSphere Alliance",
+        address: "88 Future St., Helsinki, Finland",
+        iso: "VSA-ISO-9001-863120"
+      },
+      {
+        name: "Frontier Impact Group",
+        address: "29 Impact Lane, Rio de Janeiro, Brazil",
+        iso: "FIG-ISO-9001-450182"
+      },
+      {
+        name: "NextEra Development Trust",
+        address: "10 Progress Road, Nairobi, Kenya",
+        iso: "NDT-ISO-9001-104238"
+      },
+      {
+        name: "Global Integrity Partners",
+        address: "12 Trust Tower, Paris, France",
+        iso: "GIP-ISO-9001-222900"
+      },
+      {
+        name: "Digital Transformation League",
+        address: "67 Tech Valley, Mumbai, India",
+        iso: "DTL-ISO-9001-980021"
+      },
+      {
+        name: "Holistic Progress Collective",
+        address: "35 Mindful Lane, Barcelona, Spain",
+        iso: "HPC-ISO-9001-312456"
+      },
+      {
+        name: "Essential Horizons Network",
+        address: "145 Outlook Road, Dublin, Ireland",
+        iso: "EHN-ISO-9001-731102"
+      },
+      {
+        name: "Progressive Insight Alliance",
+        address: "98 ThinkBright Blvd, Lisbon, Portugal",
+        iso: "PIA-ISO-9001-188813"
+      },
+      {
+        name: "World Citizen Initiative",
+        address: "51 Global Ave, Vienna, Austria",
+        iso: "WCI-ISO-9001-057811"
+      },
+      {
+        name: "Transcendence Foundation",
+        address: "27 Spirit Drive, Stockholm, Sweden",
+        iso: "TF-ISO-9001-887612"
+      },
+      {
+        name: "Empowerment Synergy Corp",
+        address: "73 Aspiration Square, Doha, Qatar",
+        iso: "ESC-ISO-9001-992003"
+      },
+      {
+        name: "Virtuality Advancement Creative",
+        address: "490 Meta Blvd, Austin, USA",
+        iso: "VAC-ISO-9001-750221"
+      },
+      {
+        name: "United World Leadership",
+        address: "59 Unity Way, Auckland, New Zealand",
+        iso: "UWL-ISO-9001-555999"
+      },
+      {
+        name: "GloboSphere Assembly",
+        address: "649 Planet Lane, Rome, Italy",
+        iso: "GSA-ISO-9001-013789"
+      },
+      {
+        name: "FutureConnect Institute",
+        address: "28 Connect Drive, Montreal, Canada",
+        iso: "FCI-ISO-9001-287128"
+      },
+      {
+        name: "ChangeMakers Collective",
+        address: "303 Progress Point, Beirut, Lebanon",
+        iso: "CMC-ISO-9001-998722"
+      },
+      {
+        name: "Harmony Progress Association",
+        address: "16 Peace Park, Bangkok, Thailand",
+        iso: "HPA-ISO-9001-228731"
+      }
+    ];
+
+    const orgListElem = document.getElementById('orgList');
+    const searchInput = document.getElementById('orgSearchInput');
+
+    function renderOrgList(filter) {
+      const search = filter.trim().toLowerCase();
+      orgListElem.innerHTML = '';
+
+      if (search.length === 0) {
+        orgListElem.style.display = 'none';
+        return;
+      }
+
+      const results = orgData.filter(org =>
+        org.name.toLowerCase().includes(search) ||
+        org.address.toLowerCase().includes(search) ||
+        org.iso.toLowerCase().includes(search)
+      );
+
+      if (results.length === 0) {
+        orgListElem.innerHTML = '<li class="org-item">No organizations found.</li>';
+      } else {
+        results.forEach(org => {
+          const li = document.createElement('li');
+          li.className = 'org-item';
+          li.innerHTML = `
+            <div class="org-name">${org.name}</div>
+            <div class="org-detail">Address: ${org.address}</div>
+            <div class="org-detail">ISO Certification No: ${org.iso}</div>
+            ${org.website ? `<div class="org-link">Website: <a href="${org.website}" target="_blank">${org.website}</a></div>` : ''}
+          `;
+          orgListElem.appendChild(li);
+        });
+      }
+
+      orgListElem.style.display = 'block';
+    }
+
+    searchInput.addEventListener('input', function () {
+      renderOrgList(this.value);
+    });
+  </script>
+</section>
+<!-- Organization Search Section End -->
+
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container">
+      <div class="row gy-5">
+
+        <!-- Logo & Newsletter -->
+        <div class="col-lg-4">
+          <div class="footer-content">
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <span class="sitename">AssureMark</span>
+            </a>
+            <p class="mb-4">
+              Empowering businesses worldwide with expert ISO consultancy services. Get certified with confidence and elevate to global standards with AssureMark International.
+            </p>
+
+            <div class="newsletter-form">
+              <h5>Stay Informed</h5>
+              <form action="forms/newsletter.php" method="post" class="php-email-form">
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
+                  <button type="submit" class="btn-subscribe">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Thank you for subscribing!</div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+
+            <ul>
+              <li></li>
+
+              <li></li>
+
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ISO Solutions -->
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>ISO Solutions</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> ISO 9001: Quality</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> ISO 14001: Environment</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> ISO 27001: InfoSec</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> ISO 45001: H&amp;S</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> All Services</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-lg-4">
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-info">
+                <p>Friedrichstraße<br>Berlin – 10117, Germany</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="contact-info">
+                <p>+49 30 123456789</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <p>info@assuremarkinternational.online</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/assuremark"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/assuremark"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://www.linkedin.com/company/assuremark"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.youtube.com/@assuremark"><i class="bi bi-youtube"></i></a>
+              <a href="https://github.com/assuremark"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="copyright">
+              <p>© <span>2004</span>&nbsp;<strong class="px-1 sitename">AssureMark International</strong> · All Rights Reserved</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="footer-bottom-links">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
